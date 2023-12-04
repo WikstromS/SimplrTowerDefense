@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkpe3ums5l7a8"]
+
+[ext_resource type="Script" path="res://Scripts/bullets.cs" id="1_1orgj"]
+[ext_resource type="Texture2D" uid="uid://d2k2n71oesnuj" path="res://icon.svg" id="1_l50le"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lpd22"]
+size = Vector2(12, 12)
+
+[node name="Bullets" type="Area2D"]
+script = ExtResource("1_1orgj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_l50le")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_lpd22")
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="OnScreenExited"]

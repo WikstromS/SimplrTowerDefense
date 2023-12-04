@@ -4,6 +4,8 @@ using System.Diagnostics;
 
 public partial class enemy : RigidBody2D
 {
+	public const int HP = 10;
+
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
