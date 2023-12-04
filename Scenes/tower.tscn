@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpjd0rkmkoh1"]
+
+[ext_resource type="Texture2D" uid="uid://c8xpamvpikw10" path="res://Art/white-rect.png" id="1_3vy5i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ullad"]
+size = Vector2(70, 64)
+
+[node name="Tower" type="CharacterBody2D"]
+position = Vector2(349, 360)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.236, 0.25)
+texture = ExtResource("1_3vy5i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ullad")
